@@ -1,0 +1,86 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+body{background: url(img/bg1.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+}
+
+.sidenavbar{
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color:#c9f4f7;
+  transition: all .5s ease;
+}
+
+.sidenavbar h2{
+  font-size: 35px;
+  text-transform: uppercase;
+  margin: 14px 0;
+  padding-left: 30px;
+}
+
+.sidenavbar ul{
+  padding-left:25px;
+}
+
+.sidenavbar ul li{
+  list-style: none;
+  padding: 15px 0;
+  border-bottom: 1px solid#7777; ;
+}
+
+.sidenavbar ul li a{
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.sidenavbar ul li:hover a{
+  padding-left:20px ;
+  color: #878f03;
+}
+
+.sidenavbar i{
+  padding:0 10px ;
+}
+.sidenavbar i:hover{
+ color: #878f03;
+}
+
+#check{display: none;}
+
+label #btn ,label #cancel{
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  border-radius: 3px;
+
+}
+
+label #btn{
+   left: 45px;
+   top:25px;
+   font-size: 25px;
+   color: azure;
+   padding: 6px 12px;
+}
+label #cancel{
+   z-index: 1111;
+   left: -200px;
+   top:20px;
+   font-size: 35px;
+   color:black;
+   transition: all .5s ease;
+}
+
+#check:checked ~.sidenavbar{
+ left:0;
+}
+
+#check:checked ~ label #cancel{
+ left:200px;
+}
